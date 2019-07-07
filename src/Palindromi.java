@@ -7,6 +7,18 @@ public class Palindromi {
     public static String reverseString (String text) {
         String reversed = "";
         
+        int i = 0;
+        
+        while (i < text.length()) {
+            char c = text.charAt(i);
+            reversed = c + reversed;
+            i++;
+        }
+        
+        return reversed;
+        
+        
+        /*
         int count = text.length() - 1;
         
         while (count >= 0) {
@@ -15,14 +27,14 @@ public class Palindromi {
         }
         
         return reversed;
+
+        */
     }
     
     public static boolean palindrome(String text) {
-        if (text.equalsIgnoreCase(reverseString(text))) {
-            return true;
-        }
+        boolean isPalindrome = text.equalsIgnoreCase(reverseString(text));
         
-        return false;
+        return isPalindrome;
     }
     
     
