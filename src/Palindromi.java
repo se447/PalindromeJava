@@ -16,11 +16,15 @@ public class Palindromi {
         
         return reversed;
     }
-    /*
-    public static boolean palindrome(String text) {
     
+    public static boolean palindrome(String text) {
+        if (text.equalsIgnoreCase(reverseString(text))) {
+            return true;
+        }
+        
+        return false;
     }
-    */
+    
     
     public static void main (String[] args) {
         Scanner reader = new Scanner(System.in);
@@ -28,20 +32,7 @@ public class Palindromi {
         System.out.println("Type a text: ");
         String text = reader.nextLine();
         
-        System.out.println(reverseString(text));
-    }
-}
-
-/*
-public class Palindromi {
-
-    public static boolean palindrome(String text) {
-        // write code here
-        return false;
-    }
-
-    public static void main(String[] args) {
-         
+        
         if (palindrome(text)) {
             System.out.println("The text is a palindrome!");
         } else {
@@ -49,4 +40,3 @@ public class Palindromi {
         }
     }
 }
-*/
